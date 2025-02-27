@@ -1,12 +1,10 @@
-const express=require('express')
+const express=require('express');
+const signup = require('../controller/authController');
 
 
 const router=express.Router();
 
-
-router.post('/signup',(req,res)=>{
-     res.json({message:'signup Success'})
-})
+router.post('/signup',signup)
 
 
 

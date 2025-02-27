@@ -14,10 +14,12 @@ connectDB()//DB
 const authRouter=require('./routes/authRouter')
 
 app.use(express.urlencoded({extended:true}))
+
 app.use('/api/auth',authRouter)
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
+
+// app.get('/', (req, res) => {
+//   res.send('Hello, World!');
+// });
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
